@@ -7,6 +7,9 @@ const PORT = process.env.PORT || 8080
 
 const app = express()
 
+const routes = require("./controllers/routes");
+app.use(routes);
+
 
 app.use(cors())
 app.use(express.urlencoded({ limit: '200mb',extended: true }));
